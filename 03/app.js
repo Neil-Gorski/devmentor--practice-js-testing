@@ -13,3 +13,9 @@ function checkArgType(arg, type) {
     throw new Error(`Arg: ${arg} has not the type of ${type}`);
   }
 }
+
+function checkIfMinIsBiggerMax(min, max) {
+  if (min > max) {
+    throw new Error(`Ar1: ${min} > Arg2: ${max}`);
+  }
+}
