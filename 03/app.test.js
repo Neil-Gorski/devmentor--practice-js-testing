@@ -1,7 +1,7 @@
 import randomNumber from "./app";
 
 it("return a number of type number", () => {
-  const rundomNum = randomNumber(1, 4);
+  const randomNum = randomNumber(1, 4);
   expect(typeof randomNum).toBe("number");
 });
 
