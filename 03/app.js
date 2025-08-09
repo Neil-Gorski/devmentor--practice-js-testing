@@ -6,7 +6,7 @@ export default function randomNumber(min, max) {
   }
   checkIfMinIsBiggerMax(min, max);
 
-  return Math.random();
+  return getRundomNumber(min, max);
 }
 
 function checkArgType(arg, type) {
