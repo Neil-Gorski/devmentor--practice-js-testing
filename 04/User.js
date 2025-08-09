@@ -2,6 +2,7 @@ export default class User {
   constructor(obj) {
     this.email = this._isValidEmail(obj.email);
     this.password = this._isValidPassword(obj.password);
+    this.domain = "devmentor.pl";
   }
   getEmail() {
     return this.email;
@@ -24,5 +25,8 @@ export default class User {
       );
     }
     return password;
+  }
+  login() {
+    return this.email.split("@")[1] === this.domain ? true : false;
   }
 }
