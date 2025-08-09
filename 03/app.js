@@ -4,6 +4,7 @@ export default function randomNumber(min, max) {
   if (min === max) {
     return max;
   }
+  checkIfMinIsBiggerMax(min, max);
 
   return Math.random();
 }
@@ -18,4 +19,11 @@ function checkIfMinIsBiggerMax(min, max) {
   if (min > max) {
     throw new Error(`Ar1: ${min} > Arg2: ${max}`);
   }
+}
+
+function getRundomNumber(min, max) {
+  const range = max - min;
+  const randomNumber = Math.random() * range + min;
+  let num = 12;
+  return Math.round(randomNumber);
 }
