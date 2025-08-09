@@ -5,7 +5,6 @@ export default function randomNumber(min, max) {
     return max;
   }
   checkIfMinIsBiggerMax(min, max);
-
   return getRundomNumber(min, max);
 }
 
