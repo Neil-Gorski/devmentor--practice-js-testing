@@ -26,7 +26,8 @@ it("return error when the 1st argument ist less then the 2nd.", () => {
 it("return 7 when 1st & 2nd arg is 7", () => {
   const arg1 = 7;
   const arg2 = 7;
-  expect(() => randomNumber(arg1, arg2)).toBe(7);
+  const randomNum = randomNumber(arg1, arg2);
+  expect(randomNum).toBe(7);
 });
 
 it("return a number between -3 and 3 if 1st arg is -3 and 2nd 3", () => {
