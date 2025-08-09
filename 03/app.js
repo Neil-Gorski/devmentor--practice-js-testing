@@ -1,3 +1,1 @@
-export default function randomNumber(min, max) {
-
-}
+export default function randomNumber(min, max) {}
