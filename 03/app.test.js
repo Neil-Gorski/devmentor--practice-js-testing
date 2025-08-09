@@ -34,5 +34,6 @@ it("return a number between -3 and 3 if 1st arg is -3 and 2nd 3", () => {
   const arg1 = -3;
   const arg2 = 3;
   const randomNum = randomNumber(arg1, arg2);
-  expect(randomNum).toBe(randomNum >= arg1 || randomNum <= arg2);
+  const isInRange = arg1 <= randomNum || randomNum <= arg2;
+  expect(isInRange).toBe(true);
 });
