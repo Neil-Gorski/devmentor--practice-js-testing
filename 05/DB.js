@@ -49,7 +49,7 @@ export default class DB {
         const lengthAfterFilter = this._rows.length;
 
         if (lengthBeforeFilter === lengthAfterFilter) {
-          reject("Item not exist!");
+          reject(new Error("Item not exist!"));
         } else {
           resolve("Item was remove!");
         }
@@ -60,7 +60,7 @@ export default class DB {
   update(data) {
     return new Promise((resolve, reject) => {
       if (!data.id) {
-        this.async(reject, "ID have to be set!");
+        this.async(reject, new Error("ID have to be set!"));
       } else {
         this.async(() => {
           let updated = null;
@@ -76,7 +76,7 @@ export default class DB {
           if (updated) {
             resolve(updated);
           } else {
-            reject("ID not found!");
+            reject(new Error("ID not found!"));
           }
         });
       }
